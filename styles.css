@@ -1,0 +1,1111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+/* header & navbar */
+h1,
+h2,
+h3 {
+  color: #333;
+  text-align: center;
+}
+
+/* General header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: rgb(40, 40, 75); /* Light gray background */
+}
+
+/* Left-side icons styling */
+.header-left {
+  display: flex;
+  gap: 10px; /* Space between icons */
+  padding-left: 20px; /* Adds left padding */
+}
+
+.header-left img {
+  width: 30px; /* Adjust size for smaller icons */
+  height: 30px;
+  padding: 2px;
+}
+
+/* Right-side contact information */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between contact info and button */
+}
+
+.contact-info {
+  display: flex; /* Puts phone numbers in a row */
+  gap: 30px; /* Adjust gap between the phone numbers */
+}
+
+.contact-info p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between phone icon and number */
+  color: white;
+}
+
+.contact-info img {
+  width: 20px; /* Adjust size of phone icons */
+  height: 20px;
+  border-radius: 3px;
+}
+
+/* Button styling */
+.button {
+  padding: 10px 20px;
+  background-color: #68b045; /* Button background color */
+  color: white; /* Button text color */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px;
+  }
+
+  .header-left {
+    justify-content: center;
+    width: 100%; /* Full width for social media icons */
+    padding-left: 0;
+    gap: 5px; /* Reduce gap between icons for mobile */
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Reduce gap between contact info and button */
+    width: 100%; /* Full width for the contact info */
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px; /* Stack phone numbers vertically */
+  }
+
+  .contact-info p {
+    font-size: 14px; /* Smaller font for phone numbers */
+  }
+
+  .button {
+    padding: 10px 16px; /* Smaller button size */
+    font-size: 14px; /* Smaller button text */
+    width: 50%; /* Full width button */
+    text-align: center;
+    margin-left: 60px;
+  }
+
+  /* Adjust icon sizes for mobile */
+  .header-left img,
+  .contact-info img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  /* Adjust padding to reduce the navbar height */
+  padding: 5px 2px;
+
+  z-index: 10;
+}
+
+.logo img {
+  height: 60px; /* Adjust logo size */
+  margin-right: 60px;
+  margin-left: 20px; /* Space between logo and navigation items */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 190px;
+  margin: 0;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+nav ul li {
+  margin: 0 10px;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+
+  /* For positioning the hover underline */
+  display: block; /* To apply the underline properly */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-toggle {
+  display: none; /* Initially hidden on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #333; /* Adjust color as needed */
+  margin: 4px 0;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the image */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Overlay for text */
+.text-overlay {
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+  border-radius: 10px;
+}
+
+/* Heading styles */
+.text-overlay h1 {
+  font-size: 3rem;
+  margin: 30px 0;
+  color: white;
+}
+
+/* Paragraph styles */
+.text-overlay p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.text-overlay button {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 16px;
+  padding-left: 16px;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+
+/* our advantage section */
+.section1 {
+  background-color: #fff;
+}
+
+.main-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
+  text-align: center;
+}
+.main-heading span {
+  color: rgb(99, 192, 13);
+}
+
+.main-paragraph {
+  font-size: 0.7rem;
+  color: #b8b5b5;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.image-blocks {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.image-block {
+  text-align: center;
+  width: 150px;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 8px;
+}
+
+.image-block img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f1efef;
+  border-radius: 50%;
+}
+
+.image-block h1 {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.image-block p {
+  font-size: 0.7rem;
+  color: #666;
+  line-height: 1.5;
+}
+/* about us section */
+.section2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section2 {
+  padding-top: 60px;
+}
+.about-image {
+  width: 100%;
+
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  margin-top: 50px;
+}
+.detailDiv {
+  justify-items: left;
+  font-size: 0.9rem;
+  width: 450px;
+  padding: 20px;
+  margin: 30px;
+}
+
+.detailDiv p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  margin-top: 5px;
+}
+.main-heading2 {
+  font-size: 2rem;
+  color: #333;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  text-align: center;
+  padding-top: 70px;
+}
+.main-heading2 span {
+  color: rgb(99, 192, 13);
+}
+.detailDiv button {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 16px;
+  padding-left: 16px;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+/* service section */
+
+.image-blocks2 {
+  display: flex;
+
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.image-block2 {
+  text-align: center;
+  width: 230px;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 8px;
+  background-color: #f1efef;
+}
+
+.image-block2 img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  border-radius: 50%;
+}
+
+.image-block2 h1 {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.image-block2 p {
+  font-size: 0.7rem;
+  color: #666;
+  line-height: 1.5;
+}
+.image-block2 button {
+  border: none;
+  color: rgb(99, 192, 13);
+  text-decoration: underline;
+}
+.main-heading3 {
+  font-size: 2rem;
+  color: #333;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  text-align: center;
+  padding-top: 70px;
+}
+.main-heading3 span {
+  color: rgb(99, 192, 13);
+}
+.main-paragraph3 {
+  font-size: 0.5rem;
+  color: #b8b5b5;
+  max-width: 500px;
+  margin: 20px auto 40px auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.image-block2 h1 {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.ig {
+  position: relative;
+  top: -35px; /* Adjust this value to move half of the image outside */
+
+  /* Set the width of the image container */
+}
+
+.image-block2 p {
+  font-size: 0.8rem;
+  color: #666;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+/* our portfolio section */
+.portfolio {
+  background: rgb(31, 29, 29);
+}
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 700px;
+  justify-self: center;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: rgb(31, 29, 29);
+  color: white;
+  padding: 20px;
+}
+.imagesDoc {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #fff;
+  padding: 0;
+}
+.imagesDoc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8,
+.img9,
+.img10 {
+  width: 150px;
+  height: 150px;
+}
+.img1 {
+  background-color: white;
+}
+.img2 {
+  background-color: gray;
+}
+.img3 {
+  background-color: rgb(235, 235, 235);
+}
+.img4 {
+  background-color: rgb(158, 155, 155);
+}
+.img5 {
+  background-color: white;
+}
+.img6 {
+  background-color: rgb(182, 182, 182);
+}
+.img7 {
+  background-color: rgb(209, 207, 207);
+}
+.img8 {
+  background-color: white;
+}
+.img9 {
+  background-color: rgb(224, 75, 75);
+}
+.img10 {
+  background-color: gray;
+}
+.main-heading4 {
+  font-size: 2rem;
+  color: white;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  text-align: center;
+  padding-top: 40px;
+}
+.main-heading4 span {
+  color: rgb(99, 192, 13);
+}
+.main-paragraph4 {
+  font-size: 0.7rem;
+  color: #b8b5b5;
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: auto;
+}
+.logo {
+  color: rgb(172, 88, 39);
+}
+.portfolio4 {
+  background: rgb(31, 29, 29);
+  padding: 50px;
+}
+
+/*our process section */
+
+.process {
+  padding-bottom: 30px;
+}
+.process-heading h2 {
+  font-weight: bold;
+  padding-top: 30px;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.process-black-text {
+  color: black;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.process-green-text {
+  color: rgb(99, 192, 13);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  position: relative; /* For positioning lines */
+}
+
+.step {
+  text-align: center;
+  width: 150px;
+  padding: 5px;
+
+  border-radius: 8px;
+  position: relative; /* For positioning the line between the circles */
+}
+
+.step .image-circle {
+  width: 70px; /* Size of the circle */
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 3px solid #b8b5b5;
+  margin: 10px auto;
+}
+
+.step img {
+  width: 50px; /* Image size inside the circle */
+  height: 50px;
+  object-fit: cover;
+}
+.circle-number {
+  position: absolute;
+  top: 5px; /* Moves the number circle above the image circle */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the number horizontally */
+  width: 20px; /* Size of the small circle */
+  height: 20px;
+  background-color: #febd19; /* Circle color */
+  color: black; /* Number color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Makes the circle */
+  font-size: 12px; /* Font size for the number */
+  font-weight: bold;
+}
+
+/* Line connecting the circles */
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 28%;
+  /* Position the line after the circle */
+  width: 100px;
+  height: 2px;
+  left: 108px;
+  background-color: #b8b5b5; /* Line color */
+  transform: translateY(-50%); /* Center the line vertically */
+}
+
+.process-steps {
+  position: relative;
+}
+.step h6 {
+  font-size: 0.6rem;
+  color: #b8b5b5;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.step p {
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+/* people about us section */
+
+
+
+.people {
+  padding: 40px 20px;
+  background-color: #f5f0f0d3; /* Light background color for the section */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.people > div {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Header and Paragraph */
+.people h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.people p {
+  font-size: 0.7rem;
+  color: #b8b5b5;
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: auto;
+}
+.people span {
+  color: rgb(99, 192, 13);
+  font-weight: bold;
+}
+/* Styling for the Quadrant Divs (with visible grid lines) */
+.people > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 20px; /* Space between grid items */
+  /* Border for the entire grid */
+  position: relative;
+}
+
+.people > div:nth-child(2) > div {
+  /* Borders for individual quadrant divs */
+  padding: 20px;
+
+  display: flex; /* Flexbox for the layout of image and text */
+  align-items: center; /* Center the items vertically */
+  gap: 20px;
+  /* Space between image and text */
+}
+
+/* Add a Cross (+) Divider with Horizontal and Vertical Lines */
+.people > div:nth-child(2)::before,
+.people > div:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  background-color: #ccc;
+}
+
+/* Horizontal Line (for cross) */
+.people > div:nth-child(2)::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Horizontal line */
+  transform: translateY(-50%); /* Center the line vertically */
+}
+
+/* Vertical Line (for cross) */
+.people > div:nth-child(2)::after {
+  top: 0;
+  left: 50%;
+  width: 2px; /* Vertical line */
+  height: 100%;
+  transform: translateX(-50%); /* Center the line horizontally */
+}
+
+/* Image and Text Styling inside each Card */
+.people > div:nth-child(2) > div img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: none; /* Circular image */
+}
+
+.people > div:nth-child(2) > div h1 {
+  font-size: 1rem;
+  color: black;
+  margin: 0; /* Remove default margin */
+  padding: 0;
+  text-align: left; /* Remove any padding */
+}
+
+.people > div:nth-child(2) > div p {
+  font-size: 0.7rem;
+  color: black;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove any padding */
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter; /* Ensure the text is left-aligned */
+}
+.np {
+  flex-direction: column;
+  width: 290px;
+}
+
+/* our skills section */
+.circleProgressiveDiv {
+  width: 975px;
+  margin: auto;
+  height: 264px;
+  display: flex;
+  gap: 62px;
+  margin: auto;
+}
+.progressCard {
+  height: 100%;
+  width: 192px;
+}
+.progressCard h2 {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 38px;
+  color: rgb(63, 62, 62);
+}
+.borderCircle {
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 28px;
+  margin-left: 16px;
+}
+.topBorderCircle {
+  height: 201px;
+  width: 201px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.innerBorderCircle {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+/* project section */
+.project {
+  height: 344px;
+  width: 100%;
+  background-color: #8ec63f;
+  flex-direction: column;
+  display: flex;
+  margin-top: 20px;
+}
+
+.projecthead h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 30px;
+}
+.pInput {
+  width: 100%;
+  height: 99px;
+  display: flex;
+}
+.inputDiv {
+  width: 776px;
+  margin-left: 162px;
+
+  gap: 10px;
+}
+.inputDiv input {
+  width: 170px;
+  height: 30px;
+  font-size: 15px;
+  margin-top: 34px;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: none;
+}
+.pInput input::placeholder {
+  color: #d3cdcd;
+  font-family: "Times New Roman", Times, serif;
+}
+.pbtn {
+  background-color: #febd19;
+  width: 175px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+
+  font-size: 16px;
+}
+.pbtn {
+  margin-top: 37px;
+  margin-left: 25px;
+}
+.pPara {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+.pPara p {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 23px;
+  width: 800px;
+  justify-self: center;
+}
+.contact {
+  width: 100%;
+  height: 650px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.contactDiv {
+  width: 100%;
+  height: 133px;
+
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+.contactDiv h1 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 36px;
+}
+.contactDiv h1 span {
+  color: #668e18;
+}
+.contactDiv p {
+  font-size: 0.7rem;
+  color: #b8b5b5;
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: auto;
+}
+.mapDiv {
+  width: 100%;
+  height: 98px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.mapTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+.mapTop img {
+  width: 30px;
+  height: 30px;
+}
+.mapTop p {
+  font-size: 25px;
+}
+.mapBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 8px;
+}
+.mapBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+}
+.mapPhn {
+  display: flex;
+  gap: 15px;
+}
+.mapPhn p {
+  color: black;
+  font-size: 23px;
+}
+
+.location {
+  width: 100%;
+  height: 380px;
+  margin-bottom: 40px;
+}
+.loaction iframe {
+  width: 100%;
+  height: 380px;
+}
+
+/* footer section */
+
+.footer {
+  width: 100%;
+  height: 369px;
+  display: flex;
+  background-color: #668e18;
+}
+.footer .m1 {
+  height: 100%;
+  width: 247px;
+  margin-left: 57px;
+}
+.footer .m1 img {
+  width: 151px;
+  margin-top: 53px;
+}
+.footer .m1 p {
+  color: white;
+  margin-top: 15px;
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer .m1 h3 {
+  color: white;
+  margin-top: 50px;
+  font-size: 1rem;
+  margin-left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer .m1 span {
+  font-size: 1rem;
+}
+
+.footer .m2 {
+  height: 70%;
+  width: 331px;
+  display: flex;
+  padding-left: 121px;
+  flex-direction: column;
+  border-right: 2px solid #a3f00a;
+  padding-top: 1px;
+  margin-top: 50px;
+  gap: 13px;
+}
+.footer .m2 p {
+  text-decoration: underline;
+  font-size: 0.7rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer .m2 h1 {
+  font-size: 1rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 80px;
+}
+.footer .m3 {
+  height: 70%;
+  width: 295px;
+  display: flex;
+  padding-left: 65px;
+  flex-direction: column;
+  border-right: 2px solid #a3f00a;
+  padding-top: 1px;
+  margin-top: 50px;
+  gap: 13px;
+  
+}
+.footer .m3 p {
+  text-decoration: underline;
+  font-size: 0.7rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer .m3 h1 {
+  font-size: 1rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 2.5rem;
+}
+
+.footer .m4 {
+  padding-left: 77px;
+  padding-top: 22px;
+  padding-right: 57px;
+  
+}
+.footer .m4 h1 {
+  color: white;
+  margin-top: 32px;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 60px;
+}
+.footer .m4 p {
+  color: white;
+  font-size: 0.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  
+  
+  
+}
+.footer .m4 img {
+  width: 25px;
+  height: 25px;
+  padding: 4px;
+  
+  
+}
+.footer .m4 span{
+  margin-top: 5px;
+}
+.footer .socialDiv{
+  
+  display: flex;
+  gap: 3px;
+}
+.footer .socialDiv img{
+  width: 25px;
+  height: 25px;
+  margin-top: 25px;
+}
+.footer .m4 h2{
+  color: white;
+  margin-top: 32px;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 40px;
+
+}
+  
+
